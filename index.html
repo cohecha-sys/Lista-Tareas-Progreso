@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de tareas con progreso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">ORGANIZA TU DÍA</p>
+      <h1>Mis tareas</h1>
+      <p class="subtitle">Pequeños pasos, grandes logros.</p>
+    </header>
+
+    <section class="stats" aria-label="Progreso de tareas">
+      <article class="stat"><span id="total">0</span><small>Total</small></article>
+      <article class="stat"><span id="completed">0</span><small>Completadas</small></article>
+      <article class="stat"><span id="pending">0</span><small>Pendientes</small></article>
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-label"><span>Progreso general</span><strong id="percentage">0%</strong></div>
+      <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+    </section>
+
+    <form id="taskForm" class="task-form">
+      <input id="taskInput" type="text" placeholder="Escribe una tarea..." autocomplete="off" aria-label="Nueva tarea">
+      <button type="submit">+ Agregar tarea</button>
+    </form>
+    <p id="message" class="message" aria-live="polite"></p>
+
+    <section class="list-section">
+      <h2>Mi lista</h2>
+      <ul id="taskList" class="task-list"></ul>
+      <p id="emptyState" class="empty">Aún no tienes tareas. ¡Agrega la primera!</p>
+    </section>
+    <footer>Hecho para avanzar un día a la vez.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
